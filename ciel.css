@@ -62,12 +62,12 @@ body {
   z-index: 2;
 }
 .change-bg {
-  width: 700px;
+  width: 400px;
   height: 600px;
   transform: translate(-60%, -30%);
 }
 .change .bar {
-  background: yellow;
+  background: rgb(208, 207, 207);
 }
 .change #bar1 {
   width: 30px;
@@ -82,4 +82,25 @@ body {
 }
 .change {
   display: block;
+}
+
+.content {
+  position: absolute;
+  top: 30%;
+  left: 40%;
+  border: none;
+  border-radius: 50%;
+  z-index: 9;
+}
+
+#img-container {
+  max-width: 100%;
+  height: auto;
+}
+
+#stars {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
 }

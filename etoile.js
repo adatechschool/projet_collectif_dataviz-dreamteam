@@ -16,7 +16,7 @@ update();
 
 //setup fonction quand l'utilisateur joue avec l'ecran
 window.onresize = function () {
-  setup();
+setup();
 };
 
 //la fonction etoile qui fonctionne comme un construteur pour les objets etoiles
@@ -39,7 +39,8 @@ function Star() {
 
   //fonction qui montre les etoiles
   this.show = function () {
-    //declaration de variable
+  
+  //declaration de variable
 
     let x, y, radius, opacity;
 
@@ -137,14 +138,11 @@ function fetchData1() {
       console.log(data.records[0].fields.planete_planet);
       console.log(data.records[0].fields.diametre_diameter_km);
       console.log(data.records[0].fields.masse_mass_x10_24_kg);
-      console.log(
-        data.records[0].fields.temperature_max_highest_temperature_degc
-      );
+      console.log(data.records[0].fields.temperature_max_highest_temperature_degc);
       console.log(data.records[0].fields.decouverte_discovery);
       console.log(data.records[0].fields.atmospheric_composition);
-      //const img = document.createElement("img");
-      //img.src = data.records[0].fields.image.filename;
-      //output.appendChild(img);
+      const img = document.getElementById("img-container");
+      img.src = 'https://www.datastro.eu/explore/dataset/donnees-systeme-solaire-solar-system-data/files/'+data.records[0].fields.image.id+'/300/'
     })
     .catch((error) => {
       console.log(error);
@@ -171,9 +169,8 @@ function fetchData2() {
       );
       console.log(data.records[1].fields.decouverte_discovery);
       console.log(data.records[1].fields.atmospheric_composition);
-      //const img = document.createElement("img");
-      //img.src = data.records[0].fields.image.filename;
-      //output.appendChild(img);
+      const img = document.getElementById("img-container");
+      img.src = 'https://www.datastro.eu/explore/dataset/donnees-systeme-solaire-solar-system-data/files/'+data.records[1].fields.image.id+'/300/'
     })
     .catch((error) => {
       console.log(error);
@@ -200,9 +197,8 @@ function fetchData3() {
       );
       console.log(data.records[2].fields.decouverte_discovery);
       console.log(data.records[2].fields.atmospheric_composition);
-      //const img = document.createElement("img");
-      //img.src = data.records[0].fields.image.filename;
-      //output.appendChild(img);
+      const img = document.getElementById("img-container");
+      img.src = 'https://www.datastro.eu/explore/dataset/donnees-systeme-solaire-solar-system-data/files/'+data.records[2].fields.image.id+'/300/'
     })
     .catch((error) => {
       console.log(error);
@@ -229,9 +225,8 @@ function fetchData4() {
       );
       console.log(data.records[3].fields.decouverte_discovery);
       console.log(data.records[3].fields.atmospheric_composition);
-      //const img = document.createElement("img");
-      //img.src = data.records[0].fields.image.filename;
-      //output.appendChild(img);
+      const img = document.getElementById("img-container");
+      img.src = 'https://www.datastro.eu/explore/dataset/donnees-systeme-solaire-solar-system-data/files/'+data.records[3].fields.image.id+'/300/'
     })
     .catch((error) => {
       console.log(error);
@@ -258,9 +253,8 @@ function fetchData5() {
       );
       console.log(data.records[4].fields.decouverte_discovery);
       console.log(data.records[4].fields.atmospheric_composition);
-      //const img = document.createElement("img");
-      //img.src = data.records[0].fields.image.filename;
-      //output.appendChild(img);
+      const img = document.getElementById("img-container");
+      img.src = 'https://www.datastro.eu/explore/dataset/donnees-systeme-solaire-solar-system-data/files/'+data.records[4].fields.image.id+'/300/'
     })
     .catch((error) => {
       console.log(error);
@@ -288,9 +282,8 @@ function fetchData6() {
       );
       console.log(data.records[5].fields.decouverte_discovery);
       console.log(data.records[5].fields.atmospheric_composition);
-      //const img = document.createElement("img");
-      //img.src = data.records[0].fields.image.filename;
-      //output.appendChild(img);
+      const img = document.getElementById("img-container");
+      img.src = 'https://www.datastro.eu/explore/dataset/donnees-systeme-solaire-solar-system-data/files/'+data.records[5].fields.image.id+'/300/'
     })
     .catch((error) => {
       console.log(error);
@@ -317,9 +310,8 @@ function fetchData7() {
       );
       console.log(data.records[6].fields.decouverte_discovery);
       console.log(data.records[6].fields.atmospheric_composition);
-      //const img = document.createElement("img");
-      //img.src = data.records[0].fields.image.filename;
-      //output.appendChild(img);
+      const img = document.getElementById("img-container");
+      img.src = 'https://www.datastro.eu/explore/dataset/donnees-systeme-solaire-solar-system-data/files/'+data.records[6].fields.image.id+'/300/'
     })
     .catch((error) => {
       console.log(error);
@@ -346,9 +338,8 @@ function fetchData8() {
       );
       console.log(data.records[7].fields.decouverte_discovery);
       console.log(data.records[7].fields.atmospheric_composition);
-      //const img = document.createElement("img");
-      //img.src = data.records[0].fields.image.filename;
-      //output.appendChild(img);
+      const img = document.getElementById("img-container");
+      img.src = 'https://www.datastro.eu/explore/dataset/donnees-systeme-solaire-solar-system-data/files/'+data.records[7].fields.image.id+'/300/'
     })
     .catch((error) => {
       console.log(error);
@@ -375,9 +366,8 @@ function fetchData9() {
       );
       console.log(data.records[8].fields.decouverte_discovery);
       console.log(data.records[8].fields.atmospheric_composition);
-      //const img = document.createElement("img");
-      //img.src = data.records[0].fields.image.filename;
-      //output.appendChild(img);
+      const img = document.getElementById("img-container");
+      img.src = 'https://www.datastro.eu/explore/dataset/donnees-systeme-solaire-solar-system-data/files/'+data.records[8].fields.image.id+'/300/'
     })
     .catch((error) => {
       console.log(error);
