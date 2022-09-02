@@ -24,6 +24,24 @@ body {
   transform: translateY(4px);
 }
 .nav li button {
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 10px;
+  border: none;
+  font: normal 13px/normal "Warnes", Helvetica, sans-serif;
+  color: rgba(255,255,255,1);
+  text-decoration: normal;
+  text-align: center;
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  white-space: pre;
+  text-shadow: 0 0 10px rgba(255,255,255,1) , 0 0 20px rgba(255,255,255,1) , 0 0 30px rgba(255,255,255,1) , 0 0 40px #baaab8 , 0 0 70px #836b80 , 0 0 80px #c5b9c4 , 0 0 100px #c7d3ee ;
+  -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
   color: white;
   border: none;
   background: black;
@@ -33,7 +51,9 @@ body {
 }
 .nav li button:hover {
   font-weight: bold;
+  text-shadow: 0 0 10px rgba(255,255,255,1) , 0 0 20px rgba(255,255,255,1) , 0 0 30px rgba(255,255,255,1) , 0 0 40px #586363 , 0 0 70px #768888 , 0 0 80px #bedada , 0 0 100px #96a6a6 ;
 }
+
 .nav li {
   list-style: none;
   padding: 15px 0;
@@ -67,7 +87,7 @@ body {
   transform: translate(-60%, -30%);
 }
 .change .bar {
-  background: #CD4629;
+  background: #a39a98;
 }
 .change #bar1 {
   width: 30px;
@@ -84,6 +104,15 @@ body {
   display: block; 
 }
 
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .content {
   position: absolute;
   top: 30%;
@@ -91,6 +120,22 @@ body {
   border: none;
   border-radius: 50%;
   z-index: 9;
+  animation: fade-in 5s;
+}
+
+@keyframes float {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: translatey(-20px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
 }
 
 #img-container {
@@ -102,6 +147,8 @@ body {
   border: none;
   border-radius: 100%;
   padding: 0px;
+  transform: translatey(0px);
+	animation: float 6s ease-in-out infinite;
 }
 
 
@@ -113,12 +160,18 @@ body {
 }
 
 .text-content {
-  position: absolute;
+    font-size: 16px;
+    color: white;
+    position: absolute;
     top: 15%;
     left: 60%;
-    height: 500px;
+    height: 450px;
     width: 400px;
     z-index: 1;
-    background: white;
     font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
 }
+
+
+
+
